@@ -1,0 +1,63 @@
+<?php
+// Luc Besson est à court d'inspiration. 
+// Je lui ai donc créé un programme générant des suggestions de scénario.
+
+// Définition des tableaux contenant les options qui, quoi, à qui et où.
+do{
+$qui = ['Bruce Willis', 
+        'Liam Neeson', 
+        'Un chinchilla sous Xanax', 
+        'Un Yamakasi', 
+        'Greta Thunberg', 
+        'Un chauffeur de taxi', 
+        'Un artiste incompris', 
+        'Léon', 
+        'Un flic'];
+$quoi = ['kidnappe', 
+        'poursuit', 
+        'sauve', 
+        'assassine', 
+        'surveille'];
+$aqui = ['des dealers de cocaïne', 
+        'Vladimir Poutine', 
+        'son ombre', 
+        'un hérisson', 
+        'une huître', 
+        'sa soeur', 
+        'un nourrisson'];
+$ou =  ['dans un hôtel', 
+        'à Porte de la Chapelle', 
+        'près d\'un lac', 
+        'dans sa cave', 
+        'à New-York', 
+        'dans un aéroport', 
+        'dans les bas fonds londoniens'];
+
+// Détermination des index maximums pour générer des nombres aléatoires
+$maxqui = count($qui)-1;
+$maxquoi = count($quoi)-1;
+$maxaqui = count($aqui)-1;
+$maxou = count($ou)-1;
+
+// Génération de nombres aléatoires pour chaque élément
+$quirand = rand(0, $maxqui);
+$quirand = rand(0,$maxqui);
+$quoirand = rand(0,$maxquoi);
+$aquirand = rand(0,$maxaqui);
+$ourand = rand(0,$maxou);
+
+// Attribution des éléments choisis à des variables
+$hero = $qui[$quirand];
+$action = $quoi[$quoirand];
+$personnage = $aqui[$aquirand];
+$where = $ou [$ourand];
+
+// Affichage de la phrase finale résumant le scénario
+echo $hero . ' ' . $action . ' '. $personnage . ' '. $where ;
+
+// Demande à l'utilisateur s'il souhaite générer un nouveau scénario
+$scenar = readline ('Dites "OK" pour générer un nouveau scénario.');
+$scenar = strtoupper($scenar); }
+// La boucle continue tant que l'utilisateur entre "OK"
+while ($scenar = 'OK') ;
+    echo $hero . ' ' . $action . ' '. $personnage . ' ' . $where ;
