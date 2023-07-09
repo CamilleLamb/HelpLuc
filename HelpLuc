@@ -1,6 +1,4 @@
 <?php
-// Luc Besson est à court d'inspiration. 
-// Je lui ai donc créé un programme générant des suggestions de scénario.
 
 // Définition des tableaux contenant les options qui, quoi, à qui et où.
 do{
